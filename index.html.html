@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchy Bites | Premium Dry Foods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page { display: none; }
+        .page.active { display: block; }
+    </style>
+</head>
+<body class="bg-amber-50/30 text-gray-800 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <button onclick="showPage('home')" class="text-2xl font-bold text-amber-700 tracking-wide">CRUNCHY<span class="text-emerald-600">BITES</span></button>
+                </div>
+                <div class="flex items-center space-x-6 font-medium">
+                    <button onclick="showPage('home')" class="nav-btn text-amber-700 font-bold">Home</button>
+                    <button onclick="showPage('shop')" class="nav-btn text-gray-600 hover:text-amber-700 transition">Shop Now</button>
+                    <button onclick="showPage('cart')" class="relative p-2 text-gray-600 hover:text-amber-700 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="page active">
+        <header class="relative bg-amber-900 text-white h-[450px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 opacity-40">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 z-10">
+                <span class="text-emerald-400 font-bold uppercase text-sm bg-emerald-950/60 px-3 py-1 rounded-full">100% Premium & Organic</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mt-4 mb-4 max-w-2xl">Taste the Goodness of Naturally Dried Foods</h1>
+                <button onclick="showPage('shop')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition">Explore Shop</button>
+            </div>
+        </header>
+
+        <section class="max-w-7xl mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Our Best Sellers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border rounded-2xl p-4 shadow-sm hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1600189020840-e9cb1856699a?auto=format&fit=crop&w=400&q=80" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-lg font-bold">Roasted Cashew Nuts (250g)</h3>
+                    <p class="text-amber-800 font-extrabold mt-1">Rs. 1,450</p>
+                    <button onclick="showPage('product')" class="w-full bg-amber-700 text-white mt-4 py-2 rounded-lg font-semibold hover:bg-amber-800">View Product Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="shop" class="page">
+        <div class="max-w-7xl mx-auto px-4 py-10">
+            <h1 class="text-3xl font-bold mb-6 text-amber-900">Crunchy Shop</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-4 shadow-sm border">
+                    <img src="https://images.unsplash.com/photo-1600189020840-e9cb1856699a?auto=format&fit=crop&w=400&q=80" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg">Roasted Cashew Nuts (250g)</h3>
+                    <p class="text-amber-800 font-extrabold mt-2">Rs. 1,450</p>
+                    <button onclick="showPage('cart')" class="w-full bg-emerald-600 text-white mt-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Buy Now</button>
+                </div>
+                <div class="bg-white rounded-2xl p-4 shadow-sm border">
+                    <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=400&q=80" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="font-bold text-lg">Premium Raw Almonds (250g)</h3>
+                    <p class="text-amber-800 font-extrabold mt-2">Rs. 1,200</p>
+                    <button onclick="showPage('cart')" class="w-full bg-emerald-600 text-white mt-4 py-2 rounded-lg font-semibold hover:bg-emerald-700">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product" class="page">
+        <section class="max-w-5xl mx-auto px-4 py-12">
+            <div class="bg-white p-6 md:p-12 rounded-3xl shadow-sm grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600189020840-e9cb1856699a?auto=format&fit=crop&w=800&q=80" class="w-full h-[350px] object-cover rounded-2xl">
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold bg-amber-100 text-amber-800 px-3 py-1 rounded-full">Best Seller</span>
+                        <h1 class="text-3xl font-extrabold text-gray-900 mt-3">Premium Roasted Cashew Nuts</h1>
+                        <p class="text-2xl font-bold text-amber-800 mt-4">Rs. 1,450.00</p>
+                        <p class="text-gray-600 mt-4">Our premium cashews are slow-roasted to perfection with a touch of organic sea salt. Perfect healthy snack pack.</p>
+                    </div>
+                    <button onclick="showPage('cart')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg shadow-md mt-6">Proceed To Checkout</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="cart" class="page">
+        <div class="max-w-4xl mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold mb-8 text-center">Checkout Order</h1>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border max-w-lg mx-auto">
+                <h3 class="text-xl font-bold border-b pb-4 mb-4">Order Item Summary</h3>
+                <div class="flex justify-between text-sm mb-4">
+                    <span id="prod-name" class="font-semibold text-gray-800">Roasted Cashew Nuts (250g)</span>
+                    <span id="total-price" class="text-amber-800 font-bold">Rs. 1,450</span>
+                </div>
+                
+                <div class="space-y-3 pt-4 border-t">
+                    <h4 class="font-semibold text-gray-800">Delivery Details</h4>
+                    <input type="text" id="cust-name" placeholder="Your Name" class="w-full border p-2.5 rounded-lg text-sm outline-none">
+                    <input type="text" id="cust-phone" placeholder="Phone Number" class="w-full border p-2.5 rounded-lg text-sm outline-none">
+                    <textarea id="cust-address" placeholder="Delivery Address" class="w-full border p-2.5 rounded-lg text-sm outline-none h-20"></textarea>
+                </div>
+
+                <button onclick="sendWhatsAppOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg mt-6 transition flex items-center justify-center space-x-2">
+                    <span>Order via WhatsApp 🚀</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-white text-lg font-bold">CRUNCHY<span class="text-emerald-500">BITES</span></p>
+            <p class="mt-2 text-xs">&copy; 2026 Crunchy Bites. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation Logic
+        function showPage(pageId) {
+            // Hide all sections
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            // Show requested section
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // WhatsApp Messaging Logic
+        function sendWhatsAppOrder() {
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const address = document.getElementById('cust-address').value.trim();
+            
+            const productName = document.getElementById('prod-name').innerText;
+            const totalPrice = document.getElementById('total-price').innerText;
+
+            if(!name || !phone || !address) {
+                alert('Anē machan, විස්තර ටික fill කරලා ඉන්නකෝ! 😊');
+                return;
+            }
+
+            const myWhatsAppNumber = "94772549864"; // Oyage number eka
+
+            const message = `*🔥 NEW DRY FOOD ORDER 🔥*\n\n` +
+                            `*👤 Customer Details:*\n` +
+                            `• Name: ${name}\n` +
+                            `• Phone: ${phone}\n` +
+                            `• Address: ${address}\n\n` +
+                            `*📦 Order Items:*\n` +
+                            `• ${productName}\n\n` +
+                            `*💰 Total:* ${totalPrice}\n\n` +
+                            `Please confirm my order! 🙏`;
+
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${myWhatsAppNumber}&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
